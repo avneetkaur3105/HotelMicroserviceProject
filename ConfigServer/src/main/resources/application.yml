@@ -1,0 +1,20 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: CONFIGSERVER
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/avneetkaur3105/SpringBootMicroservices
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8671/eureka
+  instance:
+    prefer-ip-address: true
+
